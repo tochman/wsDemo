@@ -23,7 +23,9 @@
     document.addEventListener('DOMContentLoaded', () => {
       let nickname
       let incomingMessage, messageBody
+
       const connection = new WebSocket('ws://4f6082c55d63.ngrok.io')
+
       window.connection = connection
 
       const connectionDisplay = document.getElementById('connection')
