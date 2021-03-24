@@ -23,7 +23,7 @@
     document.addEventListener('DOMContentLoaded', () => {
       let nickname
       let incomingMessage, messageBody
-      const connection = new WebSocket('ws://ab3ce9a856b7.ngrok.io')
+      const connection = new WebSocket('ws://4f6082c55d63.ngrok.io')
       window.connection = connection
 
       const connectionDisplay = document.getElementById('connection')
@@ -52,7 +52,6 @@
           messageBody = incomingMessage.data
         }
 
-
         let newElement = document.createElement('div')
         newElement.innerHTML = messageBody
         messagesDisplay.appendChild(newElement)
@@ -60,7 +59,6 @@
 
       nickButton.addEventListener('click', () => {
         nickname = nickInput.value
-
         nickButton.style.visibility = "hidden"
         nickInput.style.visibility = "hidden"
         let nickDisplay = document.createElement('span')
